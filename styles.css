@@ -104,4 +104,49 @@
 .rotateButton a:hover:before {
   transform: rotate(0deg);
 }
+
+.swipeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 200px);
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.swipeButton a {
+  text-decoration: none;
+  color: #351435;
+  font-family: sans-serif;
+  font-size: 45px;
+  border: 1px solid #351435;
+  padding: 40px 80px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.swipeButton a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #351435;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.swipeButton a:hover:before {
+  transform: translateX(0);
+}
+
+.swipeButton a:hover {
+  color: white;
+}
 /*# sourceMappingURL=styles.css.map */
